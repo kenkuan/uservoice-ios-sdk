@@ -161,5 +161,14 @@ static NSBundle *userVoiceBundle;
     return @"3.2.8";
 }
 
++ (UIViewController *)userVoiceForumInterfaceForConfig:(UVConfig *)config
+{
+    [UVSession currentSession].config = config;
+    [UVSession currentSession].isModal = YES;
+    UINavigationController *navigationController = [[UVNavigationController alloc] init] ;
+    [UVUtils applyStylesheetToNavigationController:navigationController];
+    navigationController.viewControllers = @[[[UVRootViewController alloc] initWithViewToLoad:@"suggestions"]];
+    return navigationController;
+}
 
 @end

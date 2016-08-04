@@ -65,5 +65,6 @@
 + (void)presentUserVoiceModalViewControllerForParent:(UIViewController *)viewController andSite:(NSString *)site andKey:(NSString *)key andSecret:(NSString *)secret;
 + (void)presentUserVoiceModalViewControllerForParent:(UIViewController *)viewController andSite:(NSString *)site andKey:(NSString *)key andSecret:(NSString *)secret andSsoToken:(NSString *)token;
 + (void)presentUserVoiceModalViewControllerForParent:(UIViewController *)viewController andSite:(NSString *)site andKey:(NSString *)key andSecret:(NSString *)secret andEmail:(NSString *)email andDisplayName:(NSString *)displayName andGUID:(NSString *)guid;
++ (UIViewController *)userVoiceForumInterfaceForConfig:(UVConfig *)config;
 
 @end
